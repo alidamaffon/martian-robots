@@ -1,3 +1,9 @@
+## The Solution
+
+**1. Implement Grid class*
+This class was implemented to define and manage the grid boundaries as well as tracking "scent" positions where robots are lost. It includes scent tracking (we convert and save the last position of the lost robot to an integer as a unique identifier) and boundary tracking (we check if a position is outside the grid bounds so that if a robot attempts to move off-grid from a non-scented position, it leaves a scent before it is lost).
+
+
 ## The Problem
 The surface of Mars can be modelled by a rectangular grid around which robots are able to move according to instructions provided from Earth. You are to write a program that determines each sequence of robot positions and reports the final position of the robot.
 
