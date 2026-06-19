@@ -29,9 +29,9 @@ Note: [This link](https://stackoverflow.com/questions/1437790/how-to-snap-a-dire
 
 Read input from stdin and generate output based on instructions. The output is renderd in the terminal.
 The current sample output should be:
-1 1 E
-3 3 N LOST
-2 3 S
+- 1 1 E
+- 3 3 N LOST
+- 2 3 S
 
 
 ## The Problem
