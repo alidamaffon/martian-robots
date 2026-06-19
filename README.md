@@ -1,7 +1,7 @@
 ## How to Run
 
 ### Prerequisites
-- Node.js installed on your system
+Node.js installed on your system
 
 ### Running the Program
 ```bash
@@ -11,9 +11,11 @@ node main.js < sample.txt
 ## The Solution
 
 **1. Implement Grid class**
+
 This class was implemented to define and manage the grid boundaries as well as tracking "scent" positions where robots are lost. It includes scent tracking (we convert and save the last position of the lost robot to an integer as a unique identifier) and boundary tracking (we check if a position is outside the grid bounds so that if a robot attempts to move off-grid from a non-scented position, it leaves a scent before it is lost).
 
 **2. Implement Robot class**
+
 This class represents individual robots with the position, the orientation and the instructions processing logic. Each robot can turn left (left 90 degrees), turn right (right 90 degrees) and move forward. The robots are processed one at a time, to allow later robots to benefit from scents left by earlier lost robots.
 I mapped the orientation against numeric value based on NESW convention(N=0, E=1, S=2, W=3) and converted the orientation to direction vectors based on the assumption that the X axis represents East-West (with East being positive) and the y axis represents North-South (with North being positive) to easily track movement.
 - North : [0, 1]
@@ -24,7 +26,12 @@ I mapped the orientation against numeric value based on NESW convention(N=0, E=1
 Note: [This link](https://stackoverflow.com/questions/1437790/how-to-snap-a-directional-2d-vector-to-a-compass-n-ne-e-se-s-sw-w-nw) help me shape this solution.
 
 **3. Process input to generate output**
+
 Read input from stdin and generate output based on instructions. The output is renderd in the terminal.
+The current sample output should be:
+1 1 E
+3 3 N LOST
+2 3 S
 
 
 ## The Problem
